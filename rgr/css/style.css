@@ -1,0 +1,743 @@
+
+
+
+
+
+body {
+    font-family: 'Roboto', sans-serif; /* Встановлюємо шрифт для всього тексту на сайті */
+    overflow-x: hidden; /* Заборонити прокрутку по горизонтальній осі для мобільних пристроїв */
+    background-color: #E0FFFF;
+}
+
+
+@media only screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden; /* Заборонити прокрутку по горизонтальній осі для мобільних пристроїв */
+       /* margin-left: 200px; /* Зсув вправо на 50px */
+       margin: auto auto;
+        width: 85%;
+
+    }
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .container {
+        max-width: 100%; /* Зменшення ширини контейнера в половину при адаптації */
+    }
+}
+ 
+
+
+/* CSS стилі для фото */
+.photos img {
+    margin: 0 10px; /* Додатковий відступ між фотографіями */
+    max-width: 150px; /* Максимальна ширина фотографій */
+    opacity: 0; /* Початкова прозорість 0 */
+    animation: fadeIn 1s ease forwards; /* Анімація появи */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Початкова прозорість 0 */
+    }
+    100% {
+        opacity: 1; /* Кінцева прозорість 1 */
+    }
+}
+
+
+
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Стилі для шапки */
+
+header {
+    background-color: #8eb5e9; /* Колір фону заголовка */
+    color: #ffffff; /* Колір тексту */
+    padding: 10px; /* Відступи від країв заголовку */
+    display: flex;
+    justify-content: space-between; /* Рівномірне розташування елементів по ширині */
+    align-items: center; /* Центруємо елементи по вертикалі */
+    border-radius: 60px; /* Закруглені кути */
+    z-index: 1000; /* Задаємо високий індекс шару, щоб він був над іншим контентом */
+}
+
+#menu-toggle {
+    display: none; /* Спочатку приховуємо кнопку */
+}
+
+#menu {
+    display: block; /* Початково показуємо меню */
+    margin-top: 40px; /* Відступ від верху */
+}
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#menu ul li {
+    margin: 5px 0;
+}
+
+#menu ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Стилі для мобільних пристроїв */
+@media (max-width: 768px) {
+    header {
+       /* position: sticky; /* Зробити заголовок "прикріпленим" тільки на мобільних */
+        top: 0; /* Встановлюємо відстань від верхнього краю вікна */
+    }
+
+    #menu-toggle {
+        display: block; /* Показуємо кнопку на мобільних */
+       /* position: sticky; /* Фіксуємо кнопку при прокрутці */
+        top: 110; /* Встановлюємо відстань від верхнього краю вікна */
+        background-color: #8eb5e9; /* Колір фону кнопки */
+        color: #ffffff; /* Колір тексту кнопки */
+       /* padding: 0px; /* Відступи від країв кнопки */
+        border: none; /* Видаляємо рамку */
+       /* border-radius: 60px; /* Закруглені кути */
+        z-index: 1000; /* Задаємо високий індекс шару, щоб вона була над іншим контентом */
+        margin: auto;
+
+    }
+
+    #menu {
+        display: none; /* Приховуємо меню, коли воно неактивне */
+    }
+
+    /* Показуємо меню, коли кнопка активна */
+    #menu.active {
+        display: block;
+    }
+}
+
+
+
+/* Стилі для рамки */
+h2 {
+    background-color: #8eb5e9;
+    color: #ffffff;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 60px; /* Закруглені кути */
+    text-align: center; /* Вирівнюємо текст по центру */
+    font-size: 40px;
+    margin: 10px;
+}
+
+h4 {
+    color: #ffffff;
+    padding: 0px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 60px; /* Закруглені кути */
+    text-align: center; /* Вирівнюємо текст по центру */
+    font-size: 40px;
+    margin: 0px;
+        }
+
+
+/* Медіа-запит для адаптації розміру тексту для мобільних пристроїв */
+@media only screen and (max-width: 600px) {
+    h2 {
+        font-size: 15px; /* Змінюємо розмір тексту на 15px для мобільних пристроїв */
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    h4 {
+        font-size: 20px; /* Змінюємо розмір тексту на 15px для мобільних пристроїв */
+padding: 5px;
+    }
+}
+
+
+/* Зміна коліру тексту телефонних номерів та посилань */
+#contact .contact-content li span a,
+#contact .contact-content li span {
+    color: #ffffff; /* Змініть на власний колір */
+    transition: color 0.5s ease; /* Анімація зміни кольору при наведенні */
+}
+
+    /* Зміна коліру тексту при наведенні */
+    #contact .contact-content li span a:hover {
+        color: #B0C4DE; /* Змініть на власний колір при наведенні */
+        transition: color 0.5s ease; /* Анімація зміни кольору при наведенні */
+    }
+
+
+
+
+.logo {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+    nav ul li a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Стилі для підвалу / галереї */
+footer {
+    background-color: #8eb5e9;
+    color: #ffffff;
+    border-radius: 60px; /* Закруглені кути */
+    text-align: center; /* Вирівнюємо текст по центру */
+    padding: 0px; /* Додаємо відступи для зручності */
+    font-size: 30px;
+    margin: 20px;
+}
+
+
+
+/* Стилі для мобільних пристроїв */
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block; /* Показуємо кнопку на мобільних */
+        
+    }
+
+    #menu.hidden {
+        display: none; /* Приховуємо меню, коли воно неактивне */
+    }
+
+    #menu {
+        display: none; /* Початковий стан меню - прихований */
+    }
+}
+
+
+
+/* Медіа-запит для адаптації розміру тексту для мобільних пристроїв */
+@media only screen and (max-width: 600px) {
+    footer {
+        font-size: 25px; /* Змінюємо розмір тексту на 25px для мобільних пристроїв */
+    }
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content img {
+    margin: 0 10px; /* Відступи між фото та текстом */
+    max-width: 200px; /* Максимальна ширина фото */
+}
+
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Змінюємо напрямок розташування елементів на вертикальний */
+        align-items: center; /* Вирівнюємо елементи по центру по горизонталі */
+  
+    }
+
+    .footer-content img:first-child {
+        display: none; /* Приховуємо перше фото при адаптації */
+        
+    }
+
+    .textd2 {
+        margin-top: 20px; /* Відступ від блоку вгорі */
+        margin-bottom: 20px; /* Відступ від блоку внизу */
+    }
+
+    .footer-content img {
+        width: 80px; /* Збільшення розміру фото */
+        order: -1; /* Зміщуємо фото нагору */
+    }
+}
+
+footer ul {
+    list-style: none; /* Позбавляємося від маркерів списку */
+    padding: 0;
+    text-align: center;
+}
+
+footer ul li {
+    display: inline-block; /* Розміщуємо пункти меню в один ряд */
+    margin: 10px 10px; /* Відступи між пунктами меню */
+    text-align: center;
+    font-size: 25px;
+}
+
+footer ul li a {
+    color: #ffffff; /* Колір тексту посилань */
+    text-decoration: none; /* Відсутнє підкреслення */
+    transition: color 0.5s ease; /* Анімація зміни кольору при наведенні */
+}
+
+footer ul li a:hover {
+    color: #B0C4DE; /* Колір тексту посилань при наведенні */
+    transition: color 0.5s ease; /* Анімація зміни кольору при наведенні */
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    #menu.active, #footer-menu.active {
+        transform: translateX(0); /* Здвигаємо меню в ліво при натисканні кнопки на мобільних */
+    }
+
+    #menu, #footer-menu {
+        transform: translateX(-100%); /* Початково зсуваємо меню вліво, за межі екрану на мобільних */
+       /* position: fixed; /* Фіксуємо меню на мобільних */
+        top: auto; /* Встановлюємо відстань від верхнього краю вікна */
+        left: 0; /* Розташовуємо меню в лівому куті екрана на мобільних */
+       /* width: 400px; /* Ширина меню на мобільних */
+        height: 70%; /* Висота меню (рівна висоті вікна) на мобільних */
+        background-color: #8eb5e9; /* Колір фону меню на мобільних */
+        z-index: 999; /* Задаємо високий індекс шару, щоб воно було над іншим контентом на мобільних */
+        transition: transform 0.5s ease; /* Анімація здвигу меню на мобільних */
+       border-radius: 60px; /* Закруглені кути */
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Стилі для підвалу */
+f {
+    background-color: #ffffff;
+}
+
+.news-photos {
+    display: flex;
+    overflow-x: auto; /* Включає горизонтальний скролл */
+    white-space: nowrap; /* Запобігає перенесенню елементів */
+    justify-content: center; /* Вирівнює фотографії по центру */
+    border-radius: 60px; /* Закруглені кути */
+}
+
+    .news-photos a {
+        display: inline-block; /* Додає блочний контекст для встановлення ширини та висоти */
+    }
+
+    .news-photos img {
+        width: 200px; /* Розмір фотографій, замініть на власні значення */
+        height: auto;
+        margin-right: 100px; /* Відступ між фотографіями */
+        border-radius: 60px; /* Закруглені кути */
+    }
+
+.contact-content ul {
+    list-style-type: none; /* Відключаємо маркер списку */
+    padding: 0; /* Відключаємо внутрішні відступи списку */
+}
+
+.contact-content {
+    text-align: center;
+    border: 0px solid #ffffff; /* Додаємо рамку */
+    padding: 20px; /* Додаємо внутрішні відступи */
+    margin: 0 auto; /* Центруємо блок */
+    max-width: auto; /* Максимальна ширина для центрування */
+    background-color: #8eb5e9;
+    color: #ffffff;
+    border-radius: 60px; /* Закруглені кути */
+    font-size: 25px;
+
+}
+
+/* Стилі для контенту контактів на різних типах екранів */
+@media screen and (max-width: 768px) {
+    .contact-content {
+        font-size: 12px; /* Зменшуємо розмір шрифту для менших екранів */
+        padding: 10px;
+        width: 80%;
+    }
+}
+
+#map-container {
+    /* Додайте відступи для зручності */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 60px; /* Закруглені угли */
+    overflow: hidden; /* Забезпечує обрізання контенту, що виходить за межі контейнера з закругленими краями */
+}
+
+#map-container #map iframe {
+    filter: grayscale(100%) sepia(1000%) hue-rotate(180deg) brightness(100%) contrast(100%);} 
+
+
+
+.contact-info {
+    flex: 1; /* Займає увесь вільний простір в рядку */
+    padding-right: 20px; /* Додатковий відступ справа для тексту */
+}
+
+
+.news-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.news-item {
+    flex: 1 0 300px; /* Розтягуємо елементи, але не дозволяємо їм розтягуватися за межі 300px */
+    margin: 10px;
+    border: 0px solid #ffffff;
+    background-color: #8eb5e9;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 60px; /* Закруглені кути */
+    
+    transition: transform 0.5s ease;
+}
+
+
+.news-item img {
+    width: 100%;
+    display: block; /* Центруємо зображення */
+    margin: 50px auto 0; /* Вирівнюємо зображення по центру та додаємо відступ зверху */
+    max-width: 100%; /* Зображення буде змінювати свій розмір, щоб не виходити за межі контейнера */
+    height: auto; /* Зберігає пропорції зображення при зміні ширини */
+    display: block;
+    border-radius: 60px; /* Закруглені кути */
+    filter: grayscale(10%) sepia(50%) hue-rotate(180deg) brightness(100%); /* Застосовуємо фільтр для чорно-білого, заміни чорного на синій та регулюємо яскравість */
+}
+
+
+
+
+
+.news-content {
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* Звичайний колір посилання */
+.news-item h3 a {
+    color: #ffffff; /* Звичайний колір тексту */
+    text-decoration: none; /* Відсутність підкреслення */
+    transition: color 0.5s ease; /* Анімація зміни кольору при наведенні */
+}
+
+.news-item a {
+    display: inline-block;
+    width: 80%; /* Зменшуємо ширину елемента */
+    padding: 0px; /* Додаємо внутрішні відступи */
+    height: auto;
+}
+
+    /* Зміна коліру посилання при наведенні */
+    .news-item h3 a:hover {
+        color: #B0C4DE; /* Колір тексту при наведенні */
+        transition: color 0.5s ease; /* Анімація зміни кольору при наведенні */
+    }
+
+
+    .news-item:hover {
+        transform: scale(0.95); /* Збільшуємо масштаб при наведенні */
+        transition: transform 0.5s ease; /* Додаємо плавний перехід */
+    }
+
+#scrollToTopBtn {
+    display: none; /* Значення за замовчуванням: приховано */
+    position: fixed; /* Фіксована позиція */
+    bottom: 20px; /* Відступ від нижнього краю */
+    right: 20px; /* Відступ від правого краю */
+    z-index: 99; /* Шар поверх інших елементів */
+    background-color: #8eb5e9; /*  колір фону */
+    color: #ffffff; /* Колір тексту */
+    border: none; /* Без рамки */
+    border-radius: 100px; /* Закруглені кути */
+    cursor: pointer; /* Зміна вигляду курсору при наведенні */
+    padding: 5px 5px; /* Розмір кнопки (вертикальний і горизонтальний) */
+    font-size: 16px; /* Розмір шрифту */
+    transition: background-color 0.5s ease; /* Плавна зміна кольору протягом 0.3 секунди */
+}
+
+
+#menu-toggle {
+   /* display: none; /* Значення за замовчуванням: приховано */
+    /*position: fixed; /* Фіксована позиція */
+
+    z-index: 99; /* Шар поверх інших елементів */
+    background-color: #8eb5e9; /*  колір фону */
+    color: #ffffff; /* Колір тексту */
+    border-radius: 100px; /* Закруглені кути */
+    cursor: pointer; /* Зміна вигляду курсору при наведенні */
+   /* padding: 20px; /* Розмір кнопки (вертикальний і горизонтальний) */
+    font-size: 25px; /* Розмір шрифту */
+    transition: background-color 0.5s ease; /* Плавна зміна кольору протягом 0.3 секунди */
+   /* border: 5px solid #E0FFFF;
+    margin:  auto; /* Вирівнюємо по центру */
+    text-align: center;
+    width: 200px;
+
+}
+
+#scrollToTopBtn img {
+    width: 100%; /* Зменшуємо розмір зображення на 50% */
+    height: auto;
+    display: block; /* Забезпечуємо блоковий відображення зображення */
+    margin: 0 auto; /* Вирівнюємо по центру */
+}
+
+
+    #scrollToTopBtn:hover {
+        background-color: #B0C4DE; /* Змінюємо колір при наведенні */
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    /* Стилізація дисциплін */
+    .d {
+        flex: 1 0 300px;
+        margin: 10px;
+        border: 0px solid #ffffff;
+        background-color: #8eb5e9;
+        display: flex;
+        border-radius: 60px; /* Закруглені кути */
+        align-items: center; /* Вирівнюємо елементи по центру по вертикалі */
+
+       /* opacity: 0; /* Початкове значення прозорості */
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease; /* Анімація зміни прозорості */
+
+    }
+    
+
+    .d:hover {
+        transform: scale(0.95); /* Збільшуємо масштаб при наведенні */
+        transition: transform 0.5s ease; /* Додаємо плавний перехід */
+    }
+    
+    /*.d.visible {
+        opacity: 1; /* Значення прозорості при з'явленні 
+    } */
+
+    .d img {
+        align-self: center; /* Вирівнюємо фото по центру по вертикалі */
+        width: 30%; /* Розмір фото */
+        max-width: 200px; /* Максимальна ширина фото */
+        margin-left: 5%; /* Відступ від лівого краю для фото */
+
+            margin-top: 20px; /* Додаємо відступ зверху */
+    margin-bottom: 10px; /* Додаємо відступи знизу */
+    }
+    
+    .textd {
+        flex: 1;
+        padding: 20px;
+        text-align: center;
+        color: #ffffff;
+        width: 45%; /* Розмір тексту */
+        margin-right: 0%; /* Відступ від правого краю для тексту */
+        font-size: 30px;
+    }
+
+    @media (max-width: 768px) {
+        .d {
+            flex-direction: column; /* Змінюємо напрямок розташування елементів на вертикальний */
+            align-items: center; /* Вирівнюємо елементи по центру по горизонталі */
+            text-align: center; /* Вирівнюємо текст по центру */
+            
+        }
+
+        @media screen and (max-width: 768px) {
+            .d img {
+                margin: 20px auto 0; /* Вирівнюємо фото по центру і зберігаємо відступ зверху */
+                display: block; /* Забезпечуємо блоковий відображення фото */
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .textd {
+                width: 80%; /* Змінюємо ширину тексту для медіазапиту */
+                margin: 0 auto; /* Вирівнюємо текст по центру */
+                font-size: 15px;
+                padding: 0px;
+                text-align: center;
+            }
+        }
+    }
+        
+    
+    .d2:hover {
+        transform: scale(0.95); /* Збільшуємо масштаб при наведенні */
+        transition: transform 0.5s ease; /* Додаємо плавний перехід */
+    }
+
+    
+    .d2 {
+        flex: 1 0 300px;
+        margin: 10px;
+        border: 0px solid #ffffff;
+        background-color: #8eb5e9;
+        display: flex;
+        border-radius: 60px; /* Закруглені кути */
+        align-items: center; /* Вирівнюємо елементи по центру по вертикалі */
+       /* opacity: 0; /* Початкове значення прозорості */
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease; /* Анімація зміни прозорості */
+    }
+    
+    .d2 img {
+        align-self: center; /* Вирівнюємо фото по центру по вертикалі */
+        width: 30%; /* Розмір фото */
+        max-width: 200px; /* Максимальна ширина фото */
+        margin-right: 10px; /* Додатковий відступ від тексту */
+        order: 2; /* Змінюємо порядок розташування фото */
+        margin-right: 5%;
+
+        margin-top: 20px; /* Додаємо відступ зверху */
+        margin-bottom: 10px; /* Додаємо відступи знизу */
+    }
+
+   /* .d2.visible {
+        opacity: 1; /* Значення прозорості при з'явленні 
+    }*/
+    
+    .textd2 {
+        flex: 1;
+        padding: 20px;
+        text-align: center;
+        color: #ffffff;
+        width: 45%; /* Розмір тексту */
+        margin-left: 10px; /* Відступ від лівого краю для тексту */
+        order: 1; /* Змінюємо порядок розташування тексту */
+        font-size: 30px;
+    }
+    
+
+    @media (max-width: 768px) {
+        .d2 {
+            flex-direction: column; /* Змінюємо напрямок розташування елементів на вертикальний */
+            align-items: center; /* Вирівнюємо елементи по центру по горизонталі */
+            text-align: center; /* Вирівнюємо текст по центру */
+            order: 1; /* Змінюємо порядок розташування тексту */
+            
+        }
+
+        @media screen and (max-width: 768px) {
+            .d2 img {
+                margin: 20px auto 0; /* Вирівнюємо фото по центру і зберігаємо відступ зверху */
+                display: block; /* Забезпечуємо блоковий відображення фото */
+                order: 1; /* Змінюємо порядок розташування тексту */
+            }
+        }
+
+
+        @media screen and (max-width: 768px) {
+            .textd2 {
+                width: 80%; /* Змінюємо ширину тексту для медіазапиту */
+                margin: 0 auto; /* Вирівнюємо текст по центру */
+                order: 1; /* Змінюємо порядок розташування тексту */
+                font-size: 15px;
+                text-align: center;
+                padding: 0px;
+            }
+        }
+    }
+    
+
+
+
+
+/* Стилізація галереї */
+.gallery {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 60px; /* Закруглені кути */
+}
+
+/* Адаптація для мобільних пристроїв */
+@media screen and (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(1, 1fr); /* Один стовбець для мобільних пристроїв */
+    }
+}
+
+/* Адаптація для планшетів та настільних пристроїв */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* Два стовбці для планшетів */
+    }
+}
+
+/* Адаптація для настільних пристроїв */
+@media screen and (min-width: 1025px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr); /* Три стовбці для настільних пристроїв */
+    }
+}
+
+/* Стилізація зображень */
+.image {
+    border: 0px solid #ffffff;
+    border-radius: 0px;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out; /* Анімація збільшення */
+    border-radius: 60px; /* Закруглені кути */
+    
+}
+
+
+    .image img {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Збільшення фото при наведенні */
+    .image:hover {
+        transform: scale(1.05); /* Збільшення вдвічі */
+    }
